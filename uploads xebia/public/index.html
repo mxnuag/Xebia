@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Upload Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Upload Documents</h2>
+        <form id="uploadForm" enctype="multipart/form-data" action="/upload" method="post">
+            <div class="form-group">
+                <label for="aadhar">Upload Aadhar Card:</label>
+                <input type="file" id="aadhar" name="aadhar" accept=".pdf,.jpg,.jpeg,.png" required>
+                <div class="drop-area" id="aadhar-drop-area">Drag & Drop Aadhar Card here</div>
+            </div>
+            <div class="form-group">
+                <label for="pan">Upload PAN Card:</label>
+                <input type="file" id="pan" name="pan" accept=".pdf,.jpg,.jpeg,.png" required>
+                <div class="drop-area" id="pan-drop-area">Drag & Drop PAN Card here</div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
